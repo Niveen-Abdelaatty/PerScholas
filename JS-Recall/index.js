@@ -6,7 +6,10 @@
 */
 
 // I. Variables & Data Types
-console.log('%c-------------------I. Variables & Data Types------------------', 'color:red')
+console.log(
+  '%c-------------------I. Variables & Data Types------------------',
+  'color:blue'
+);
 // A. Q + A
 /* 1. How do we assign a value to a variable? using assignment operator ( equals = ).
    2. How do we change the value of a variable? by reassigning a new value to the variable name.
@@ -25,64 +28,267 @@ console.log('%c-------------------I. Variables & Data Types------------------', 
 */
 
 // B. Strings
-console.log('%c-------------------B. Strings------------------', 'color:orange')
-let firstVariable = "Hello World";
+console.log(
+  '%c-------------------B. Strings------------------',
+  'color:orange'
+);
+let firstVariable = 'Hello World';
 firstVariable = 25;
 let secondVariable;
 secondVariable = firstVariable; // just copy the value - still two different memory locations in the stack
-secondVariable = "Shadow Coping";
+secondVariable = 'Shadow Coping';
 console.log(firstVariable); // the output should be 25
 console.log(secondVariable); // the output should be "Shadow Coping"
 const yourName = 'Niveen';
 console.log(`Hello, my name is ${yourName}`);
 
 // C. Booleans
-console.log('%c-------------------C. Booleans------------------', 'color:orange')
-  const a = 4;
-  const b = 53;
-  const c = 57;
-  const d = 16;
-  const e = 'Kevin';
+console.log(
+  '%c-------------------C. Booleans------------------',
+  'color:orange'
+);
+const a = 4;
+const b = 53;
+const c = 57;
+const d = 16;
+const e = 'Kevin';
 
-  console.log(a < b);
-  console.log(c > d);
-  console.log('Name' === 'Name');
-  // FOR THE NEXT TWO, USE ONLY && OR ||
-  console.log(true || false);
-  console.log(false || false || false || false || false || true);
-  console.log(false === false)
-  console.log(e == 'Kevin');
-  console.log(a * b > c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
-  console.log(a * a === d); // note: the answer is a simple arithmetic equation, not something "weird"
-  console.log(48 == '48');
+console.log(a < b);
+console.log(c > d);
+console.log('Name' === 'Name');
+// FOR THE NEXT TWO, USE ONLY && OR ||
+console.log(true || false);
+console.log(false || false || false || false || false || true);
+console.log(false === false);
+console.log(e == 'Kevin');
+console.log(a * b > c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
+console.log(a * a === d); // note: the answer is a simple arithmetic equation, not something "weird"
+console.log(48 == '48');
 
 // D. The Farm
-console.log('%c-------------------D. The Farm------------------', 'color:orange')
-const animal = "cow";
-if (animal === "cow"){
-	console.log("mooooo" );
-}else{
-	console.log("Hey! You're not a cow.");
+console.log(
+  '%c-------------------D. The Farm------------------',
+  'color:orange'
+);
+const animal = 'cow';
+if (animal === 'cow') {
+  console.log('mooooo');
+} else {
+  console.log("Hey! You're not a cow.");
 }
+
 // E. Driver's Ed
+console.log(
+  '%c-------------------E. Drivers Ed------------------',
+  'color:orange'
+);
+const personAge = 25;
+if (personAge >= 16) {
+  console.log('Here are the keys!');
+} else {
+  console.log("Sorry, you're too young.");
+}
 //_____________________________________________________________
 
 // II. Loops
+console.log('%c-------------------II. Loops------------------', 'color:blue');
 // A. The Basics
+console.log(
+  '%c-------------------A. The Basics------------------',
+  'color:orange'
+);
+console.log('loop No. A-1');
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+}
+console.log('loop No. A-2');
+for (let i = 10; i <= 400; i++) {
+  console.log(i);
+}
+console.log('loop No. A-3');
+for (let i = 12; i <= 4000; i = i + 3) {
+  console.log(i);
+}
 // B. Get even
+console.log(
+  '%c-------------------B. Get even------------------',
+  'color:orange'
+);
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i + '<-- is an even number');
+  } else {
+    console.log(i);
+  }
+}
 // C. Give me Five
+console.log(
+  '%c-------------------C. Give me Five------------------',
+  'color:orange'
+);
+let i = 0;
+while (i >= 0) {
+  i++;
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('I found a ' + i + ' Three is a crowd ' + ' High five');
+  } else if (i % 3 === 0) {
+    console.log('I found a ' + i + ' Three is a crowd');
+  } else if (i % 5 === 0) {
+    console.log('I found a ' + i + ' High five');
+  }
+  if (i === 100) {
+    break;
+  }
+}
 // D. Savings account
+console.log(
+  '%c-------------------D. Savings account------------------',
+  'color:orange'
+);
+let bank_account = 0;
+for (let i = 1; i <= 10; i++) {
+  bank_account += i;
+}
+console.log('the sum of all nums from 1-10 is ' + bank_account);
 //_____________________________________________________________
 
+let payBalance = 0;
+for (let i = 1; i <= 100; i++) {
+  payBalance += i;
+}
+console.log('the sum of all nums from 1-100 doubled by 2 is ' + payBalance * 2);
+//_____________________________________________________________
 // III. Arrays & Control Flow
+console.log(
+  '%c-------------------III. Arrays & Control Flow------------------',
+  'color:blue'
+);
+
 // A. Talk about it:
+/* What are the things in an array called? are elements.
+   Do Arrays guarantee those things will be in order? NO. it doesn't
+   What real-life thing could you model with an array? eggs carton
+*/
 // B. Easy Does It
+console.log(
+  '%c-------------------B. Easy Does It------------------',
+  'color:orange'
+);
+const quotes = [
+  'It didn’t matter how big our house was; it mattered that there was love in it.',
+  'Family means nobody gets left behind or forgotten.',
+  'We may have our differences, but nothing’s more important than family.',
+];
+console.log(quotes);
 // C. Accessing elements
+console.log(
+  '%c-------------------C. Accessing elements------------------',
+  'color:orange'
+);
+const randomThings = [1, 10, 'Hello', true];
+console.log('the first element ' + randomThings[0]);
+randomThings[2] = 'World';
+console.log('index 2 updated to ' + randomThings[2]);
+
 // D. Change values
+console.log(
+  '%c-------------------D. Change values------------------',
+  'color:orange'
+);
+const ourClass = ['Salty', 'Zoom', 'Sardine', 'Slack', 'Github'];
+console.log('the 3rd element ' + ourClass[2]);
+ourClass[4] = 'Octocat';
+ourClass.push('Cloud City');
+console.log(ourClass);
+
 // E. Mix It Up
+console.log(
+  '%c-------------------E. Mix It Up------------------',
+  'color:orange'
+);
+const myArray = [5, 10, 500, 20];
+myArray.push('Aegon');
+myArray.push('Ended');
+myArray.shift();
+myArray.unshift('Bob Marley');
+myArray.pop();
+console.log(myArray);
+const returnValue = myArray.reverse(); // reverse in place, doesn't copy the array
+console.log(returnValue);
+/* Did you mutate the array? Yes
+   What does mutate mean? changing the original array
+   Did the .reverse() method return anything? return the same array but reversed
+ */
+
 // F. Biggie Smalls
+console.log(
+  '%c-------------------F. Biggie Smalls------------------',
+  'color:orange'
+);
+const num = 100;
+if (num < 100) {
+  console.log('little number');
+} else {
+  console.log('big number');
+}
 // G. Monkey in the Middle
+console.log(
+  '%c-------------------G. Monkey in the Middle------------------',
+  'color:orange'
+);
+const checkTheNumber = 0;
+if (checkTheNumber > 10) {
+  console.log('big number');
+} else if (checkTheNumber < 5) {
+  console.log('little number');
+} else {
+  console.log('monkey');
+}
+
 // H. What's in Your Closet?
+console.log(
+	'%c-------------------H. Whats in Your Closet?------------------',
+	'color:orange'
+  );
+const kristynsCloset = [
+	"left shoe",
+	"cowboy boots",
+	"right sock",
+	"Per Scholas hoodie",
+	"green pants",
+	"yellow knit hat",
+	"marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+	[
+	  // These are Thom's shirts
+	  "grey button-up",
+	  "dark grey button-up",
+	  "light blue button-up",
+	  "blue button-up",
+	],[
+	  // These are Thom's pants
+	  "grey jeans",
+	  "jeans",
+	  "PJs"
+	],[
+	  // Thom's accessories
+	  "wool mittens",
+	  "wool scarf",
+	  "raybans"
+	]
+  ];
+  console.log(`Kristyn is rocking that ${kristynsCloset[2]} today!`);
+  kristynsCloset.splice(5, 1, "yellow knit hat", "raybans");
+  kristynsCloset[5] = "stained knit hat";
+  console.log(thomsCloset[0][0]);
+  console.log(thomsCloset[1][0]);
+  console.log(thomsCloset[2][0]);
+  console.log(`Thom is looking fierce in a ${thomsCloset[0][0]}, ${thomsCloset[1][0]} and ${thomsCloset[2][0]}!`);
+  thomsCloset[1][2] = "Footie Pajamas";
+
 //_____________________________________________________________
 
 // IV. Functions
