@@ -247,59 +247,146 @@ if (checkTheNumber > 10) {
 
 // H. What's in Your Closet?
 console.log(
-	'%c-------------------H. Whats in Your Closet?------------------',
-	'color:orange'
-  );
+  '%c-------------------H. Whats in Your Closet?------------------',
+  'color:orange'
+);
 const kristynsCloset = [
-	"left shoe",
-	"cowboy boots",
-	"right sock",
-	"Per Scholas hoodie",
-	"green pants",
-	"yellow knit hat",
-	"marshmallow peeps"
-  ];
-  
-  // Thom's closet is more complicated. Check out this nested data structure!!
-  const thomsCloset = [
-	[
-	  // These are Thom's shirts
-	  "grey button-up",
-	  "dark grey button-up",
-	  "light blue button-up",
-	  "blue button-up",
-	],[
-	  // These are Thom's pants
-	  "grey jeans",
-	  "jeans",
-	  "PJs"
-	],[
-	  // Thom's accessories
-	  "wool mittens",
-	  "wool scarf",
-	  "raybans"
-	]
-  ];
-  console.log(`Kristyn is rocking that ${kristynsCloset[2]} today!`);
-  kristynsCloset.splice(5, 1, "yellow knit hat", "raybans");
-  kristynsCloset[5] = "stained knit hat";
-  console.log(thomsCloset[0][0]);
-  console.log(thomsCloset[1][0]);
-  console.log(thomsCloset[2][0]);
-  console.log(`Thom is looking fierce in a ${thomsCloset[0][0]}, ${thomsCloset[1][0]} and ${thomsCloset[2][0]}!`);
-  thomsCloset[1][2] = "Footie Pajamas";
+  'left shoe',
+  'cowboy boots',
+  'right sock',
+  'Per Scholas hoodie',
+  'green pants',
+  'yellow knit hat',
+  'marshmallow peeps',
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    'grey button-up',
+    'dark grey button-up',
+    'light blue button-up',
+    'blue button-up',
+  ],
+  [
+    // These are Thom's pants
+    'grey jeans',
+    'jeans',
+    'PJs',
+  ],
+  [
+    // Thom's accessories
+    'wool mittens',
+    'wool scarf',
+    'raybans',
+  ],
+];
+console.log(`Kristyn is rocking that ${kristynsCloset[2]} today!`);
+kristynsCloset.splice(5, 1, 'yellow knit hat', 'raybans');
+kristynsCloset[5] = 'stained knit hat';
+console.log(thomsCloset[0][0]);
+console.log(thomsCloset[1][0]);
+console.log(thomsCloset[2][0]);
+console.log(
+  `Thom is looking fierce in a ${thomsCloset[0][0]}, ${thomsCloset[1][0]} and ${thomsCloset[2][0]}!`
+);
+thomsCloset[1][2] = 'Footie Pajamas';
 
 //_____________________________________________________________
 
 // IV. Functions
+console.log(
+  '%c-------------------IV. Functions------------------',
+  'color:blue'
+);
+
 // A.
+function printGreeting(name) {
+  console.log(`Hello there, ${name}`);
+}
+console.log(printGreeting('Slimer'));
+
 // B.
+function printCool(name) {
+  console.log(`${name} is cool`);
+}
+console.log(printCool('Captain Reynolds'));
+
 // C.
+function calculateCube(side) {
+  const cubeVolume = Math.pow(side, 3);
+  return cubeVolume;
+}
+console.log(calculateCube(5));
+
 // D.
+function isVowel(char) {
+  char = char.toLowerCase();
+  let vowels = ['o', 'u', 'i', 'a', 'e'];
+  for (const vowel of vowels) {
+    if (char === vowel) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(isVowel('a'));
+console.log(isVowel('A'));
+console.log(isVowel('F'));
+
 // E.
+function getTwoLengths(firstParam = '', secondParam = '') {
+  let lengthArr = [firstParam.length, secondParam.length];
+  return lengthArr;
+}
+console.log(getTwoLengths('Hank', 'Hippopopalous'));
+
 // F.
+function getMultipleLengths(arr) {
+  let lengthsArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    lengthsArr.push(arr[i].length);
+  }
+  return lengthsArr;
+}
+console.log(getMultipleLengths(['hello', 'what', 'is', 'up', 'dude']));
+
 // G.
+function maxOfThree(...numbers) {
+  let maxNum = numbers[0];
+  numbers.forEach((number) => {
+    if (number > maxNum) {
+      maxNum = number;
+    }
+  });
+  return maxNum;
+}
+console.log(maxOfThree(6, 9, 1));
+console.log(maxOfThree(9, 9, 9, 9));
+
 // H.
+function printLongestWord(array) {
+  let longestWord = '';
+  array.forEach((str) => {
+    if (str.length > longestWord.length) {
+      longestWord = str;
+    }
+  });
+  return longestWord;
+}
+console.log(
+  printLongestWord([
+    'BoJack',
+    'Princess',
+    'Diane',
+    'a',
+    'Max',
+    'Peanutbutter',
+    'big',
+    'Todd',
+  ])
+);
 //_____________________________________________________________
 
 // V. Objects
