@@ -149,11 +149,31 @@ console.log(
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
+const whereIsWaldo = [
+  ['Timmy', 'Frank'],
+  'Eggbert',
+  ['Lucinda', 'Jacc', 'Neff', 'Snoop'],
+  ['Petunia', ['Baked Goods', 'Waldo']],
+];
+whereIsWaldo.splice(1, 1); // .splice mutates the array in place and returns the removed elements.
+whereIsWaldo[1][2] = 'No One';
+console.log(whereIsWaldo[2][1][1]);
 
+console.log(
+  '%c-------------------Where is Waldo is Done------------------',
+  'color:orange'
+);
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
-
+console.log(
+  '%c-------------------Array Methods Sec is Done------------------',
+  'color:orange'
+);
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+console.log(
+  '%c-------------------Array Methods Sec is Done------------------',
+  'color:orange'
+);
