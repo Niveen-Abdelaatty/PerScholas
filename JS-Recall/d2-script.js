@@ -166,14 +166,35 @@ console.log(
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
+const kittyTalk = [
+  '...human...why you taking pictures of me?...',
+  '...the catnip made me do it...',
+  '...why does the red dot always get away...',
+];
+let meow = Math.floor(Math.random() * kittyTalk.length);
+kittyTalk[meow];
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(` at ${i} kitty said ${kittyTalk[meow]}`);
+  }
+  console.log(` at ${i} kitty said Love me, pet me! HSSSSSS!`);
+}
 console.log(
-  '%c-------------------Array Methods Sec is Done------------------',
+  '%c-------------------Excited Kitten Sec is Done------------------',
   'color:orange'
 );
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+const nums = [
+  14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+  17, 12, 71, 18, 15, 12,
+];
+const median = Math.floor((0 + nums.length) / 2);
+console.log(median);
+
 console.log(
-  '%c-------------------Array Methods Sec is Done------------------',
+  '%c-------------------Find the Median Sec is Done------------------',
   'color:orange'
 );
