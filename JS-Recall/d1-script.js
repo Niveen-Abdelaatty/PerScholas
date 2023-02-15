@@ -391,12 +391,62 @@ console.log(
 
 // V. Objects
 // A.
+let user = {
+  name: 'Niveen',
+  email: 'niveen@yahoo.com',
+  age: '45',
+  purchased: []
+}
+
 // B.
+user.email = 'niveen@google.com';
+console.log(user);
+user.age++;
+console.log(user);
+
 // C.
+user.location = 'pittsburgh';
+
 // D.
+user.purchased.push("carbohydrates");
+user.purchased.push("peace of mind");
+user.purchased.push("Merino jodhpurs");
+
+console.log(user.purchased[2]);
+
 // E.
+user.friend = {
+  name: "Grace Hopper",
+  age: 85,
+}
+user.friend.location = 'columbus';
+user.friend.purchased = [];
+console.log(user.friend.name);
+console.log(user.friend.location);
+user.friend.age = 55;
+user.friend.purchased.push("The One Ring");
+user.friend.purchased.push("A latte");
+console.log(user.friend.purchased[1]);
+
 // F.
+for(let element of user.purchased){
+  console.log(element);
+}
+for(let element of user.friend.purchased){
+  console.log(element);
+}
+
 // G.
+function updateUser(){
+  user.age++;
+  user.name.toUpperCase();
+}
+function oldAndLoud(person){
+  person.age++;
+  person.name = person.name.toUpperCase();
+}
+oldAndLoud(user);
+console.log(user);
 //_____________________________________________________________
 
 // Extra
