@@ -201,3 +201,4 @@ console.log(
   '%c-------------------Find the Median Sec is Done------------------',
   'color:orange'
 );
+
