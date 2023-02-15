@@ -191,8 +191,11 @@ const nums = [
   14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
   17, 12, 71, 18, 15, 12,
 ];
-const median = Math.floor((0 + nums.length) / 2);
-console.log(median);
+nums.sort();
+console.log(nums);
+
+const medianIndex = Math.floor((0 + nums.length) / 2);
+console.log(nums[medianIndex]);
 
 console.log(
   '%c-------------------Find the Median Sec is Done------------------',
