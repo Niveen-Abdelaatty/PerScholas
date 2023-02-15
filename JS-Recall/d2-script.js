@@ -71,13 +71,81 @@ for (let turtle of ninjaTurtles) {
   console.log(turtle);
 }
 console.log(
-    '%c-------------------Yell at the Ninja Turtles is Done------------------',
-    'color:orange'
-  );
+  '%c-------------------Yell at the Ninja Turtles is Done------------------',
+  'color:orange'
+);
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+const favMovies = [
+  'Jaws',
+  'The Fellowship of the Ring',
+  "Howl's Moving Castle",
+  'Django Unchained',
+  'Cloud Atlas',
+  'The Usual Suspects',
+  'Toy Story',
+  'Conan the Barbarian',
+  'Titanic',
+  'Harry Potter',
+  'Fried Green Tomatoes',
+  'Volver',
+  'Oculus',
+  'Seven',
+  'Black Panther',
+  'Harry Potter',
+  'Imitation of Life',
+  'Snatch',
+  'Fast and Furious',
+];
+let titanicIndex;
+for (let i = 0; i < favMovies.length; i++) {
+  if (favMovies[i] === 'Titanic') {
+    titanicIndex = i;
+  }
+}
+console.log(titanicIndex);
+favMovies.sort();
+/* convert elements into strings and then 
+   compare their corresponding UTF-16 code vlaues then 
+   order them ascendingly in place and return a reference to the same array.
+   so, sort() is permanently alter the array
+*/
+console.log(favMovies.pop());
+favMovies.push('Guardians of the Galaxy');
+favMovies.reverse();
+console.log(favMovies.shift());
+console.log(favMovies.unshift('Home alone'));
+/* 
+ what does unshift method return?
+ adds one or more elements to the beginning of an array 
+ and returns the new length of the array. 
+*/
+const idx = favMovies.indexOf('Django Unchained');
+favMovies.splice(idx, 1, 'Avatar');
+/*
+  slice() returns a new array of the sliced elements
+  and doesn't alter the original array
+*/
+let midIndex = Math.floor((0 + favMovies.length) / 2);
+let slicedArr = favMovies.slice(midIndex, favMovies.length);
+console.log(slicedArr);
 
+/*
+  If the value is not contained in the array, the method returns -1
+*/
+const movieIdx = favMovies.indexOf('Django Unchained');
+console.log(movieIdx);
+
+/*
+  when we declare an array with const, you're still allowed to change the array. 
+  This is because when we change an element, we modify the referenced array, not the reference itself.
+  meaning we don't reassign to the const variable.
+*/
+console.log(
+  '%c-------------------Array Methods Sec is Done------------------',
+  'color:orange'
+);
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
