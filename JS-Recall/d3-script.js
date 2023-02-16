@@ -1,6 +1,6 @@
 // Timmy Buys a Hamster
 class Hamster {
-  constructo(name) {
+  constructor(name) {
     this.owner = '';
     this.name = name;
     this.price = 15;
@@ -77,19 +77,42 @@ const repeatExercise = (count) => {
   }
 };
 
-repeatAge(5);
-repeatEat(5);
-repeatExercise(5);
-repeatAge(4);
+// repeatAge(5);
+// repeatEat(5);
+// repeatExercise(5);
+// repeatAge(4);
 
-const gus = new Hamster('Gus');
-gus.owner = 'Timmy';
-console.log(gus.getPrice());
+// const gus = new Hamster('Gus');
+// gus.owner = 'Timmy';
 
-timmy.buyHamster(gus);
-repeatAge(6);
-repeatEat(2);
-repeatExercise(2);
+// timmy.buyHamster(gus);
+// repeatAge(6);
+// repeatEat(2);
+// repeatExercise(2);
+// console.log(timmy);
+
+const count = (funcName, count) => {
+  switch (funcName) {
+    case 'age':
+      for (let i = 0; i < count; i++) {
+        timmy.ageUp();
+      }
+      break;
+    case 'eat':
+      for (let i = 0; i < count; i++) {
+        timmy.eat();
+      }
+      break;
+    case 'exercise':
+      for (let i = 0; i < count; i++) {
+        timmy.exercise();
+      }
+      break;
+    default:
+      break;
+  }
+};
+count('age', 10);
 console.log(timmy);
 
 // Chef Makes Dinners
@@ -106,7 +129,6 @@ class Chef {
   prepareDinner(appetizer, entree, dessert) {
     const dinner = new Dinner(appetizer, entree, dessert);
     this.dinners.push(dinner);
-    return dinner;
   }
 }
 
