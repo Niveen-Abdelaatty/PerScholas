@@ -58,36 +58,37 @@ class Person {
   }
 }
 
-const createdPerson = new Person('Timmy');
+const timmy = new Person('Timmy');
 
-createdPerson.ageUp();
-createdPerson.ageUp();
-createdPerson.ageUp();
-createdPerson.ageUp();
-createdPerson.ageUp();
+const repeatAge = (count) => {
+  for (let i = 0; i < count; i++) {
+    timmy.ageUp();
+  }
+};
+const repeatEat = (count) => {
+  for (let i = 0; i < count; i++) {
+    timmy.eat();
+  }
+};
+const repeatExercise = (count) => {
+  for (let i = 0; i < count; i++) {
+    timmy.exercise();
+  }
+};
 
-createdPerson.eat();
-createdPerson.eat();
-createdPerson.eat();
-createdPerson.eat();
-createdPerson.eat();
+repeatAge(5);
+repeatEat(5);
+repeatExercise(5);
+repeatAge(4);
 
-createdPerson.exercise();
-createdPerson.exercise();
-createdPerson.exercise();
-createdPerson.exercise();
-createdPerson.exercise();
+const gus = new Hamster('Gus');
+gus.owner = 'Timmy';
+console.log(gus.getPrice());
 
-createdPerson.ageUp();
-createdPerson.ageUp();
-createdPerson.ageUp();
-createdPerson.ageUp();
-
-console.log(createdPerson);
-
-const createdHamster = new Hamster("Gus");
-createdHamster.owner = "Timmy";
-
-createdPerson.buyHamster(createdHamster);
+timmy.buyHamster(gus);
+repeatAge(6);
+repeatEat(2);
+repeatExercise(2);
+console.log(timmy);
 
 
