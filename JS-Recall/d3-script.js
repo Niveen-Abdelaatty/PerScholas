@@ -92,7 +92,7 @@ repeatEat(2);
 repeatExercise(2);
 console.log(timmy);
 
-// Chef Make Dinners
+// Chef Makes Dinners
 class Dinner {
   constructor(appetizer, entree, dessert) {
     this.appetizer = appetizer;
@@ -101,8 +101,8 @@ class Dinner {
   }
 }
 class Chef {
-  dinners = []; 
-  
+  dinners = [];
+
   prepareDinner(appetizer, entree, dessert) {
     const dinner = new Dinner(appetizer, entree, dessert);
     this.dinners.push(dinner);
@@ -112,9 +112,8 @@ class Chef {
 
 const chef = new Chef();
 
-  chef.prepareDinner('shrimp', 'eggs', 'cookies'),
-  chef.prepareDinner('fish', 'bread', 'apple pie'),
-  chef.prepareDinner('chicken', 'rice', 'rice pudding')
+chef.prepareDinner('shrimp', 'eggs', 'cookies'),
+chef.prepareDinner('fish', 'bread', 'apple pie'),
+chef.prepareDinner('chicken', 'rice', 'rice pudding');
 
 console.log(chef.dinners);
-
