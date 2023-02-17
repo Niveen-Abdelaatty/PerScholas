@@ -61,6 +61,7 @@ class Person {
 
 const timmy = new Person('Timmy');
 
+// three factory functions to perform repeatation
 const repeatAge = (count) => {
   for (let i = 0; i < count; i++) {
     timmy.ageUp();
@@ -77,20 +78,21 @@ const repeatExercise = (count) => {
   }
 };
 
-// repeatAge(5);
-// repeatEat(5);
-// repeatExercise(5);
-// repeatAge(4);
+repeatAge(5);
+repeatEat(5);
+repeatExercise(5);
+repeatAge(4);
 
-// const gus = new Hamster('Gus');
-// gus.owner = 'Timmy';
+const gus = new Hamster('Gus');
+gus.owner = 'Timmy';
 
-// timmy.buyHamster(gus);
-// repeatAge(6);
-// repeatEat(2);
-// repeatExercise(2);
-// console.log(timmy);
+timmy.buyHamster(gus);
+repeatAge(6);
+repeatEat(2);
+repeatExercise(2);
+console.log(timmy);
 
+// alternative method to perform repeatation - single factory function
 const count = (funcName, count) => {
   switch (funcName) {
     case 'age':
@@ -112,7 +114,9 @@ const count = (funcName, count) => {
       break;
   }
 };
-count('age', 10);
+count('age', 5);
+count('eat', 5);
+count('exercise', 5)
 console.log(timmy);
 
 // Chef Makes Dinners
